@@ -55,3 +55,6 @@ src/**/*.js
 /target
 /build
 
+# log files
+*.log
+/log

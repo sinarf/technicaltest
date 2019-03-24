@@ -1,4 +1,4 @@
-package fr.blavin.oui.sncf.technicaltest;
+package fr.blavin.oui.sncf.technicaltest.business;
 
 import java.util.ArrayList;
 import java.util.List;

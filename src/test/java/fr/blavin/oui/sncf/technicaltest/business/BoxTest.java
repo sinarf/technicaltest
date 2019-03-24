@@ -1,10 +1,12 @@
-package fr.blavin.oui.sncf.technicaltest;
+package fr.blavin.oui.sncf.technicaltest.business;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import fr.blavin.oui.sncf.technicaltest.business.Box;
 
 public class BoxTest {
 

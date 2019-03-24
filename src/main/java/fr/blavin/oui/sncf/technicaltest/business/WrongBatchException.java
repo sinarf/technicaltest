@@ -1,4 +1,4 @@
-package fr.blavin.oui.sncf.technicaltest;
+package fr.blavin.oui.sncf.technicaltest.business;
 
 /**
  * The WrongBatchException is raised in case of a wrong batch.
