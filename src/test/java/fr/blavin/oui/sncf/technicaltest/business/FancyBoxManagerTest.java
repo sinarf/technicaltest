@@ -20,6 +20,17 @@ public class FancyBoxManagerTest {
 		assertEquals(9, boxes2.size());
 	}
 
+	@Test(expected = WrongBatchException.class)
+	public void testProcessBatchNull() throws Exception {
+		String batch = null;
+		new FancyBoxManager().process(batch);
+	}
+
+	@Test(expected = WrongBatchException.class)
+	public void testProcessBatchEmpty() throws Exception {
+		new FancyBoxManager().process("");
+	}
+
 	@Test
 	public void testAddToBox() throws Exception {
 		// this part of the test would have work in legacy code.
@@ -37,4 +48,10 @@ public class FancyBoxManagerTest {
 		assertEquals(3, boxManager.boxes.size());
 
 	}
+
+	@Test(expected = WrongBatchException.class)
+	public void testConvert() throws Exception {
+		new FancyBoxManager().process("A");
+	}
+
 }

@@ -29,7 +29,9 @@ public class FancyBoxManager {
 			throw new WrongBatchException(msg);
 		}
 		if (StringUtils.isEmpty(batch)) {
-			LOG.warn("This is an empty batch nothing to do");
+			String message = "This is an empty batch nothing to do";
+			LOG.error(message);
+			throw new WrongBatchException(message);
 		} else {
 			batch = batch.trim();
 			process(batch.toCharArray());
