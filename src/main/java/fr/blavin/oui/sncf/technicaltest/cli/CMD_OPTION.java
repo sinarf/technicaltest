@@ -1,8 +1,8 @@
 package fr.blavin.oui.sncf.technicaltest.cli;
 
 public enum CMD_OPTION {
-	BATCH("b", "batch", true, "Provides batch content as a string of integer (from 1 to 9)."),
-	HELP("h", "help", false, "Display help message.");
+	BATCH("b", "batch", true, "Liste d'articles représentés par des entiers compris entre 1 et 9"),
+	HELP("h", "help", false, "Affiche le message d'aide. ");
 
 	private final String shortOption;
 	private final String longOption;
