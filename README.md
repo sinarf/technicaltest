@@ -5,6 +5,7 @@
 
 Pré-requis : avoir un JRE 7 ou supérieur. 
 
+Le jar exécutable est disponible dans le répertoire bin. 
 Pour traiter un lot, exécuter la commande suivante : 
 
 ```
@@ -36,16 +37,12 @@ Dans le répertoire target un jar contenant toutes les dépendances est produit 
 ### Outils de construction
 
 J'ai utilisé maven parce que c'est l'outil le plus répandu aujourd'hui et celui que je maitrise le mieux. 
-Utiliser maven permet : 
-  * Une utilisation facile des outils d'intégration continue
-  * Un format standard pour les projets
-  
 Gradle aurait été un choix équivalent, qui apporte les mêmes avantages.  
 
 ### Utilisation des bibliothèques 
 
 J'utilise deux bibliothèques apache commons : 
-  * commons-cli : Vu le nombre failble d'options, j'aurais pu coder à la la main, mais  
+  * commons-cli : Vu le nombre failble d'options, j'aurais pu coder à la la main, mais je trouve que c'est plus facile de gérer les options de cette manière. 
   * commons-lang3 : Uniquement pour la classe StringUtils, juste parce que j'aime pas réinventer la roue. 
   
 Pour le reste, des choix assez classique : 
@@ -58,3 +55,7 @@ J'utilise mon propre 'coding style', qui est une somme de choix, souvent subject
 
 Mon style est très inspiré de "Clean Code" de Uncle Bob Martin. 
 
+### la langue 
+
+J'ai utilisé l'anglais dans le code, les logs et la javadoc. C'est ma préférence personnel, l'anglais étant souvent plus précis que le Français.
+J'ai mis en français pour ce fichier d'explication et pour les messages d'aide visible dans la console. 
