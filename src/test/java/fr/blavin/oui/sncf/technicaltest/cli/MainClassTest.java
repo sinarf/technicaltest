@@ -12,6 +12,18 @@ public class MainClassTest {
 		MainClass.main(cmdArgs);
 	}
 
+	@Test
+	public void testMainHelp() throws Exception {
+		String[] cmdArgs = new String[] { "--help" };
+		MainClass.main(cmdArgs);
+	}
+
+	@Test
+	public void testMainNoArg() throws Exception {
+		String[] cmdArgs = new String[] { "" };
+		MainClass.main(cmdArgs);
+	}
+
 	@Test(expected = WrongBatchException.class)
 	public void testMainEmptyBatch() throws Exception {
 		String[] cmdArgs = new String[] { "--batch" };

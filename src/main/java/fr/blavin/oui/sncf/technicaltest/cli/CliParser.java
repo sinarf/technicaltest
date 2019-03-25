@@ -1,7 +1,5 @@
 package fr.blavin.oui.sncf.technicaltest.cli;
 
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.util.List;
 
 import org.apache.commons.cli.CommandLine;
@@ -20,12 +18,6 @@ import fr.blavin.oui.sncf.technicaltest.business.WrongBatchException;
 
 public class CliParser {
 	private static final Logger LOG = LoggerFactory.getLogger(CliParser.class);
-	/** The application name. */
-	private final String applicationName;
-
-	public CliParser(String applicationName) {
-		this.applicationName = applicationName;
-	}
 
 	public void parseCommandLineArgs(String[] commandLineArgs) {
 		Options options = constructOptions();
@@ -33,7 +25,13 @@ public class CliParser {
 		CommandLineParser parser = new DefaultParser();
 		try {
 			CommandLine cmd = parser.parse(options, commandLineArgs);
-			runApplication(cmd);
+			if (cmd.hasOption(CMD_OPTION.HELP.getShortOption())) {
+				printHelp(options);
+			} else if (cmd.hasOption(CMD_OPTION.BATCH.getShortOption())) {
+				runApplication(cmd);
+			} else {
+				printHelp(options);
+			}
 		} catch (MissingArgumentException e) {
 			String message = "Argument manquant: " + e.getLocalizedMessage();
 			LOG.error(message, e);
@@ -73,18 +71,9 @@ public class CliParser {
 		return options;
 	}
 
-	/**
-	 * Prints the usage.
-	 *
-	 * @param applicationName the application name
-	 * @param options         the options
-	 * @param out             the out
-	 */
-	public void printUsage(final Options options, final OutputStream out) {
-		try (final PrintWriter writer = new PrintWriter(out);) {
-			final HelpFormatter usageFormatter = new HelpFormatter();
-			usageFormatter.printUsage(writer, 80, applicationName, options);
-		}
+	public void printHelp(final Options options) {
+		HelpFormatter helpFormatter = new HelpFormatter();
+		helpFormatter.printHelp("java -jar XspeedIt-jar-with-dependencies.jar [--batch <arg>] [--help]", options);
 	}
 
 }

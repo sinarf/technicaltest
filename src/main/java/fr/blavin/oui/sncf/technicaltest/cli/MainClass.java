@@ -18,7 +18,7 @@ public class MainClass {
 	 * @param args the arguments
 	 */
 	public static void main(String[] commandLineArgs) {
-		new CliParser("Xspeedt").parseCommandLineArgs(commandLineArgs);
+		new CliParser().parseCommandLineArgs(commandLineArgs);
 	}
 
 }
