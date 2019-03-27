@@ -1,21 +1,6 @@
 # Test Technique OUI.sncf 
 
 
-## Utilisation
-
-Pré-requis : avoir un JRE 7 ou supérieur. 
-
-Le jar exécutable est disponible dans le répertoire bin. 
-Pour traiter un lot, exécuter la commande suivante : 
-
-```
-java -jar XspeedIt-jar-with-dependencies.jar --batch 163841689525773
-```
-Remplacer **163841689525773** par votre liste d'articles. 
-
-Un fichier de log xspeedit.log est produit dans le répertoire log, qui est créé automatiquement dans le répertoire où vous avez lancer la commande. 
-
-
 ## Construction depuis les sources
 
 Pour construire le livrable, vous devez avoir les pré-requis suivant : 
@@ -29,6 +14,20 @@ mvn clean package
 ```
 
 Dans le répertoire target un jar contenant toutes les dépendances est produit et porte le nom XspeedIt-jar-with-dependencies.jar
+
+## Utilisation
+
+Pré-requis : avoir un JRE 7 ou supérieur. 
+
+Pour traiter un lot, exécuter la commande suivante : 
+
+```
+java -jar XspeedIt-jar-with-dependencies.jar --batch 163841689525773
+```
+Remplacer **163841689525773** par votre liste d'articles. 
+
+Un fichier de log xspeedit.log est produit dans le répertoire log, qui est créé automatiquement dans le répertoire où vous avez lancer la commande. 
+
 
 
 ## Explication des choix
