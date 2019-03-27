@@ -56,5 +56,5 @@ Mon style est très inspiré de "Clean Code" de Uncle Bob Martin.
 
 ### la langue 
 
-J'ai utilisé l'anglais dans le code, les logs et la javadoc. C'est ma préférence personnel, l'anglais étant souvent plus précis que le Français.
+J'ai utilisé l'anglais dans le code, les logs et la javadoc. C'est ma préférence personnelle, l'anglais étant souvent plus précis que le Français.
 J'ai mis en français pour ce fichier d'explication et pour les messages d'aide visible dans la console. 
